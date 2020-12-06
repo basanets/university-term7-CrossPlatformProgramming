@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sights</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sights.each do |sight| %>
+      <tr>
+        <td><%= sight.name %></td>
+        <td><%= sight.city_id %></td>
+        <td><%= link_to 'Show', sight %></td>
+        <td><%= link_to 'Edit', edit_sight_path(sight) %></td>
+        <td><%= link_to 'Destroy', sight, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sight', new_sight_path %>

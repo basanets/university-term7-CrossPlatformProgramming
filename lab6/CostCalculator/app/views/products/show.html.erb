@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @product.price %>
+</p>
+
+<%= form_for(@product, :url => calculate_price_path(:product_quantity => :quantity), :method => :post, remote: true) do |f| %>
+  <p>
+    <%= f.hidden_field :id, :readonly => true %>
+    <strong>Quantity to inquire for: </strong>
+    <%= text_field_tag :quantity, "0" %>
+  </p>
+  <%= submit_tag "Calculate price" %>
+<% end %>
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

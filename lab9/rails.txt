@@ -1,0 +1,6 @@
+rails g scaffold Country name:string primary_language:string area:float population:integer  
+
+rails g scaffold City name:string population:integer country_id:integer 
+
+rails g scaffold Sight name:string city_id:integer 
+

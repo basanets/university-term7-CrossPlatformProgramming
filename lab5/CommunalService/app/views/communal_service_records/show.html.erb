@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Owner name:</strong>
+  <%= @communal_service_record.owner_name %>
+</p>
+
+<p>
+  <strong>Owner last name:</strong>
+  <%= @communal_service_record.owner_last_name %>
+</p>
+
+<p>
+  <strong>Service type:</strong>
+  <%= @communal_service_record.service_type %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @communal_service_record.city %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @communal_service_record.street %>
+</p>
+
+<p>
+  <strong>House:</strong>
+  <%= @communal_service_record.house %>
+</p>
+
+<p>
+  <strong>Apartment:</strong>
+  <%= @communal_service_record.apartment %>
+</p>
+
+<%= link_to 'Edit', edit_communal_service_record_path(@communal_service_record) %> |
+<%= link_to 'Back', communal_service_records_path %>

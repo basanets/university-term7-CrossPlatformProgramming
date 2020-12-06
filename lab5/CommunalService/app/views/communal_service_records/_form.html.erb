@@ -1,0 +1,52 @@
+<%= form_with(model: communal_service_record, local: true) do |form| %>
+  <% if communal_service_record.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(communal_service_record.errors.count, "error") %> prohibited this communal_service_record from being saved:</h2>
+
+      <ul>
+        <% communal_service_record.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :owner_name %>
+    <%= form.text_field :owner_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner_last_name %>
+    <%= form.text_field :owner_last_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :service_type %>
+    <%= form.text_field :service_type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :city %>
+    <%= form.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= form.label :street %>
+    <%= form.text_field :street %>
+  </div>
+
+  <div class="field">
+    <%= form.label :house %>
+    <%= form.text_field :house %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apartment %>
+    <%= form.number_field :apartment %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

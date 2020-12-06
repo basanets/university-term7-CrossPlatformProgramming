@@ -1,0 +1,1 @@
+words should be shuffled randomly in the file "output_task2.txt" and you won't be able to understand what was the sentence before the shuffle
